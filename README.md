@@ -50,32 +50,21 @@ llama3-qlora-agent/
 │
 ├── README.md
 ├── requirements.txt
-├── notebooks/
-│   ├── 01_dataset_generation.ipynb
-│   ├── 02_qlora_training.ipynb
-│   ├── 03_evaluation.ipynb
-│   └── 04_agent_demo.ipynb
 │
 ├── src/
-│   ├── environment/
-│   │   └── toy_env.py
+│   ├── toy_env/
+│   │   └── toy_environment.py
 │   │
-│   ├── policy/
+│   ├── llm_training/
+│   │   └── qlora_train.py
 │   │   └── teacher_policy.py
 │   │
 │   ├── dataset/
 │   │   ├── generator.py
 │   │   └── formatting.py
 │   │
-│   ├── training/
-│   │   └── qlora_train.py
-│   │
-│   ├── evaluation/
-│   │   ├── metrics.py
-│   │   └── plot_loss.py
-│   │
-│   └── ui/
-│       └── streamlit_app.py
+│   ├── visualization/
+│   │   ├── evl_performance.py
 │
 ├── data/
 ├── outputs/
