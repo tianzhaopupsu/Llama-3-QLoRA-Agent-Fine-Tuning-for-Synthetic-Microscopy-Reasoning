@@ -227,7 +227,7 @@ The demo visualizes:
 ## Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/llama3-qlora-agent.git
+git clone 
 cd llama3-qlora-agent
 ```
 
