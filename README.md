@@ -17,7 +17,7 @@ The system simulates a microscopy-inspired environment where structured percepti
 
 # Core Idea
 
-Instead of training directly from real microscopy experiments, this project uses:
+Due to confidentiality restrictions, this repository uses a synthetic environment to reproduce the core reasoning and tool-calling structure of a real microscopy AI workflow. This project uses:
 
 1. A synthetic perception environment
 2. A rule-based teacher policy
