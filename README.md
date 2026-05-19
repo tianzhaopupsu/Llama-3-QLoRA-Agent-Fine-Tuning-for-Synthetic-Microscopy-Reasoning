@@ -193,8 +193,8 @@ Additional evaluation:
 
 The Streamlit UI compares:
 
-- Base Llama 3 8B
-- QLoRA-adapted Llama 3 8B
+- Base Llama 3.1 8B
+- QLoRA-adapted Llama 3.1 8B
 
 Both agents interact with the same synthetic environment.
 
