@@ -172,7 +172,7 @@ Training objective:
 ---
 ## 📉 Training Loss Curve
 
-![Training Loss](visualization/training_loss.png)
+![Training Loss](visualization/Training_loss.png)
 # Evaluation
 
 The project compares:
