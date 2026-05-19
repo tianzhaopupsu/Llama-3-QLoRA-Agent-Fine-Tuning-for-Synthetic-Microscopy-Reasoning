@@ -170,7 +170,9 @@ Training objective:
 - align reasoning policy outputs
 
 ---
+## 📉 Training Loss Curve
 
+![Training Loss](visualization/training_loss.png)
 # Evaluation
 
 The project compares:
