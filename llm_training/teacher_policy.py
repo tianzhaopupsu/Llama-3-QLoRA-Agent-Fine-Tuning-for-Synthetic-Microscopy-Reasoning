@@ -5,8 +5,8 @@ import json
 from dataclasses import dataclass, asdict
 from typing import Dict, Any, List, Tuple
 import matplotlib.pyplot as plt
-from google.colab import drive
-drive.mount('/content/drive')
+import os
+
 REGIONS = ["single_cell", "cluster", "tissue_like"]
 
 def generate_features() -> Dict[str, Any]:
@@ -102,14 +102,31 @@ def build_trajectory():
 def generate_dataset(n=100):
     return [build_trajectory() for _ in range(n)]
 def save_jsonl(dataset: List[Dict[str, Any]], path: str = "dataset.jsonl"):
-    with open(path, "w") as f:
-        for item in dataset:
-            f.write(json.dumps(item) + "\n")
+    # Ensure directory exists
+    os.makedirs(os.path.dirname(path), exist_ok=True)
 
+    with open(path, "w", encoding="utf-8") as f:
+        for item in dataset:
+            f.write(json.dumps(item, ensure_ascii=False) + "\n")
 
 if __name__ == "__main__":
-    data = generate_dataset(100)
-    save_jsonl(data, path="/content/drive/MyDrive/LLM_fine_tuning/dataset.jsonl")
-
-    print("Generated samples:", len(data))
-    print("Example:", data[0])
+    # 1. Set a random seed so your splits are reproducible
+    random.seed(42) 
+    
+    # 2. Generate a larger pool of data (e.g., 120 samples)
+    total_samples = 2000
+    data = generate_dataset(total_samples)
+    
+    # 3. Calculate split index (90% training, 10% validation)
+    split_idx = int(total_samples * 0.9)
+    train_data = data[:split_idx]
+    val_data = data[split_idx:]
+    
+    # 4. Save into separate files
+    os.makedirs("LLM_fine_tuning", exist_ok=True)
+    save_jsonl(train_data, path="LLM_fine_tuning/train_dataset.jsonl")
+    save_jsonl(val_data, path="LLM_fine_tuning/val_dataset.jsonl")
+    
+    print(f"Total Generated: {total_samples}")
+    print(f"Saved Training Samples: {len(train_data)} to LLM_fine_tuning/train_dataset.jsonl")
+    print(f"Saved Validation Samples: {len(val_data)} to LLM_fine_tuning/val_dataset.jsonl")
