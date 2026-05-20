@@ -176,7 +176,13 @@ Training objective:
 # Evaluation
 
 The project compares:
-<video src="visualization/comp.mp4" controls autoplay muted loop width="100%"></video>
+
+
+https://github.com/user-attachments/assets/23809122-0534-4f79-8c10-c2b9d7717996
+
+
+
+
 | Metric | Base Model | QLoRA Model |
 |---|---|---|
 | ReAct formatting | weak | strong |
