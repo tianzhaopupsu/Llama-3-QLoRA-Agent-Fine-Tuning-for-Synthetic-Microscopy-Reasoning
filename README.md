@@ -178,9 +178,7 @@ Training objective:
 The project compares:
 
 
-https://github.com/user-attachments/assets/23809122-0534-4f79-8c10-c2b9d7717996
-
-
+https://github.com/user-attachments/assets/13512625-a948-4c60-be89-b3d9f1e984c3
 
 
 | Metric | Base Model | QLoRA Model |
