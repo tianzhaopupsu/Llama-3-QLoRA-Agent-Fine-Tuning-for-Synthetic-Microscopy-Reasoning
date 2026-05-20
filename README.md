@@ -176,7 +176,7 @@ Training objective:
 # Evaluation
 
 The project compares:
-
+<video src="comp.mp4" controls width="100%"></video>
 | Metric | Base Model | QLoRA Model |
 |---|---|---|
 | ReAct formatting | weak | strong |
