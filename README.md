@@ -256,8 +256,7 @@ streamlit run src/ui/streamlit_app.py
 
 # Recommended Environment
 
-- Google Colab
-- NVIDIA T4 / A100 GPU
+- NVIDIA RTX 4090
 
 Suggested workflow:
 
